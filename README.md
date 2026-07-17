@@ -3,6 +3,7 @@
 A Next.js web application implementing the **self-consistency technique** to generate accurate, high-quality, and synthesized responses using multiple LLM providers.
 
 ## Live Deployment & Code Links
+* **Live Deployment Link:** [genai-self-consistency.vercel.app](https://genai-self-consistency.vercel.app/)
 * **GitHub Repository:** [github.com/babitakry/genai-self-consistency](https://github.com/babitakry/genai-self-consistency.git)
 * **Application Type:** **UI-based Web App** (Next.js App Router + React + Tailwind CSS)
 
