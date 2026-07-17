@@ -7,11 +7,13 @@ export async function POST(req: NextRequest) {
     try {
         const { prompt } = await req.json();
 
+        const baseModelSystemPrompt = "Your response must be short, concise, direct, and to the point. Avoid extra conversational filler or fluff.";
+
         // 1. Fetch responses from all three models in parallel
         const [geminiResponse, groqResponse, mistralResponse] = await Promise.all([
-            runGeminiTest(prompt),
-            runGroqTest(prompt),
-            runMistralTest(prompt),
+            runGeminiTest(prompt, baseModelSystemPrompt),
+            runGroqTest(prompt, baseModelSystemPrompt),
+            runMistralTest(prompt, baseModelSystemPrompt),
         ]);
 
         // 2. Define the system prompt for the evaluator
